@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
+	<!--<meta http-equiv="X-UA-Compatible" content="ie=edge" />-->
+	<!--<link rel="stylesheet" type="text/css" href="/css/list/1_1.css"/>-->
+	<title>Document</title>
+</head>
+<body>
+	<!--<div class="fix-box">
+		<div class="w1190">
+			<dl class="w200">
+				<dt>美容美发</dt>
+				<dd>
+					<a data-type="1" class="details-a-click">专业美容</a>
+				</dd>
+				<dd>
+					<a data-type="3" class="details-a-click">美容养生</a>
+				</dd>
+				<dd>
+					<a data-type="12" class="details-a-click">减肥纤体</a>
+				</dd>
+				<dd>
+					<a data-type="8" class="details-a-click">保健护理</a>
+				</dd>
+				<dd>
+					<a data-type="26" class="details-a-click">专业发品</a>
+				</dd>
+				<dd>
+					<a data-type="25" class="details-a-click">专业美发</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt>专业彩妆</dt>
+				<dd>
+					<a data-type="5" class="details-a-click">美甲</a>
+				</dd>
+				<dd>
+					<a data-type="6" class="details-a-click">美睫</a>
+				</dd>
+				<dd>
+					<a data-type="17" class="details-a-click">彩妆</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt>美业设备</dt>
+				<dd>
+					<a data-type="7" class="details-a-click">微美纹饰</a>
+				</dd>
+				<dd>
+					<a data-type="13" class="details-a-click">抗衰护肤</a>
+				</dd>
+				<dd>
+					<a data-type="11" class="details-a-click">仪器设备</a>
+				</dd>
+				<dd>
+					<a data-type="10" class="details-a-click">大医美</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt>美妆护肤</dt>
+				<dd>
+					<a data-type="19" class="details-a-click">美妆用品</a>
+				</dd>
+				<dd>
+					<a data-type="20" class="details-a-click">面膜品牌</a>
+				</dd>
+				<dd>
+					<a data-type="18" class="details-a-click">香水</a>
+				</dd>
+				<dd>
+					<a data-type="21" class="details-a-click">微商</a>
+				</dd>
+				<dd>
+					<a data-type="16" class="details-a-click">个人护理</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt>代工企业</dt>
+				<dd>
+					<a data-type="2" class="details-a-click">院线代工</a>
+				</dd>
+				<dd>
+					<a data-type="23" class="details-a-click">加工包材</a>
+				</dd>
+				<dd>
+					<a data-type="24" class="details-a-click">原料</a>
+				</dd>
+				<dd>
+					<a data-type="22" class="details-a-click">日化代工</a>
+				</dd>
+			</dl>
+	
+		</div>
+	</div>-->
+	
+	<div id="wp"></div>
+</body>
+
+<!--<script src="/js/data/brand.js" type="text/javascript" charset="utf-8"></script>-->
+
+<script id="tpl" type="text/html">
+	<%var LOGO_URL = '//meibanglai.com/image/mbhbrand/';%>
+	<!--<table class="list">-->
+	<%for (var i = 0; i < data.length; i++) {%>
+		<div class="list">
+			<div class="sort">
+				<ul class="clearfix">
+					<li class="fl one">
+						<img src="<%:=LOGO_URL%><%:=data[i].brand_logo%>" />
+					</li>
+				
+					<li class="fl two">
+						<p style="font-weight: bold;">公司名：
+							<a href="javascript:" class="f-rem-017"><%:=data[i].campany_name%></a>
+						</p>
+						<p>参展产品：
+							<%:=data[i].product_name%>
+						</p>
+						<!--<p class="show_box1-context_product">产品介绍：
+							<%:=data[i].product%>
+						</p>-->
+						<p>品牌官网：
+							<%:=data[i].website%>
+						</p>
+					</li>
+					<li class="fl three">
+						<a href="#">联系方式</a>
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+	<%}%>
+	<!--</table>-->
+	<hr>
+</script>
+</html>

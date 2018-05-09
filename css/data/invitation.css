@@ -1,0 +1,130 @@
+.marginTableNone{
+	margin-right: -15px;
+	margin-left: -15px;
+	width:auto;
+}
+.marginTop30{
+	margin-top: 30px
+}
+.marginTop15{
+	margin-top: 15px
+}
+.marginBottom15{
+    margin-bottom: 15px;
+}
+a:link{
+	color: #FFF
+}
+a:visited{
+	color: #FFF
+}
+p{
+    color: #898989;
+}
+hr{
+    border-bottom: 1px solid #d4d4d4;
+    border-top: 0px;
+}
+
+.invitation-name{
+    font-size: 25px;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+}
+.treatment{
+    color: red;
+    font-size: 25px;
+}
+.contact{
+    font-size: 18px;
+    color: black;
+    padding-top: 12px;
+}
+.contact-detail {
+    line-height: 20px;
+}
+.contact-detail >span {
+    line-height: 20px;
+}
+.contact-detail >img{
+    width: 18px;
+    height: 18px;
+}
+#phone{
+    color: red;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.input-a{
+    margin-bottom: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 45px;
+    padding-right: 45px;
+    background-color: #FE3989;
+    color: #FFFFFF;
+    display: inline-block;
+    width: auto;
+}
+
+.table .welfare {
+	border: none;
+}
+.welfare >a{
+	border: 1px solid red ; padding: 2px; padding-left: 4px;padding-right: 4px;color: red
+}
+
+/* 通配符模式,给col-xs-*加上margin */
+
+[id^="nav-detailed-li_"] >a:link{
+	color: #FFF
+}
+[id^="nav-detailed-li_"] >a:visited{
+	color: #FFF
+}
+
+/* 图片懒加载 */
+.demo img {
+    width: auto;
+    height: auto;
+    /* background: url(/wfly/image/public/loading.gif) 50% no-repeat; */
+}
+
+/* 选项卡 */
+.tabBar-outerBorder{
+    border:1px solid #e6e6e6;
+}
+#firstTr > td{
+    background-color: #e6e6e6;
+}
+
+
+
+
+
+/* 模板 */
+/* 星星 */
+.starts {
+    float: left;
+    text-align: left;
+}
+.starts ul {
+    float: left;
+}
+.starts ul li {
+    list-style: none;
+    width: 24px;
+    height: 24px;
+    float: left;
+    background: url(/image/public/iconpic-star-S-default.png) no-repeat;
+}
+.starts ul li.on {
+    background: url(/image/public/iconpic-star-S.png) no-repeat;
+}
+.starts ul span {
+    display: inline;
+    float: left;
+    padding-right: 10px;
+    height: 24px;
+    line-height: 24px;
+}

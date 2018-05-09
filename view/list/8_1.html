@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Document</title>
+</head>
+<body>
+	<!--<div class="fix-box">
+		<div class="w1190">
+			<dl>
+				<dt>便民服务</dt>
+				<dd>
+					<a data-type="1" class="details-a-click">美容店家</a>
+				</dd>
+				<dd>
+					<a data-type="2" class="details-a-click">装修服务</a>
+				</dd>
+				<dd>
+					<a data-type="3" class="details-a-click">广告制作</a>
+				</dd>
+				<dd>
+					<a data-type="4" class="details-a-click">包材包装</a>
+				</dd>
+				<dd>
+					<a data-type="5" class="details-a-click">代加工</a>
+				</dd>
+			</dl>
+		</div>
+	</div>	-->
+
+	<div id="wp"></div>
+</body>
+<script id="tpl" type="text/html">
+	<%var IMAGE_URL = '/view/data/details.html';%>
+	<div class="container">
+		<%for (var i = 0; i < data.length; i++) {%>
+			<div class="hover-f5 b-top-f5 m-tb-10">
+				<div class="row row-p m-0 f-s-1rem">
+					<ul class="hidden-xs col-sm-2 col-md-2 ">
+						<li class="logy-img p-r-15"><img src="<%:=data[i].image_url%>" alt=""></li>
+					</ul>
+					<ul class="col-xs-9 col-sm-8 col-md-8 p-0">
+						<li class="f-rem-017 f-w p-3">
+							<a href="<%:=IMAGE_URL%>?d=<%:=data[i].id%>"><%:=data[i].shop_name%></a>
+						</li>
+						<li class="p-3">地址：<%:=data[i].address%> </li>
+						<li class="p-3">手机：<%:=data[i].phone%></li>
+						<li class="p-3">营业时间： <%:=data[i].businessHours%></li>
+					</ul>
+					<ul class="col-xs-3 col-sm-2 col-md-2 p-0 text-center m-t-2">
+						<li>
+							<a href="" class="btn btn-danger btn-sm">联系商家</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		<%}%>
+	</div>
+	<hr />
+</script>
+</html>

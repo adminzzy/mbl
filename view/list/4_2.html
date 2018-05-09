@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Document</title>
+</head>
+<body>
+	<!--<div class="fix-box">
+		<div class="w1190">
+			<dl>
+				<dt>美妆资讯</dt>
+				<dd>
+					<a data-type="1" class="details-a-click">美容美妆资讯</a>
+				</dd>
+				<dd>
+					<a data-type="2" class="details-a-click">美容美妆赛事</a>
+				</dd>
+			</dl>
+		</div>
+	</div>-->
+	
+	<div id="wp"></div>
+</body>
+<script id="tpl" type="text/html">
+	<%var DETAILS_URL = '//meibanglai.com/view/matchMessage/';%>
+	<table class="table">
+		<%for (var i = 0; i < data.length; i++) {%>
+			<tr class="active">
+				<td>
+					<a href="<%:=DETAILS_URL%><%:=data.message%>"><%:=data[i].message.substring(0, data[i].message.length - 5)%></a>
+				</td>
+			</tr>
+		<%}%>
+	</table>
+	<hr>
+</script>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Document</title>
+</head>
+<body>
+	<!--<div class="fix-box">
+		<div class="w1190">
+			<dl class="w600">
+				<dt>展会信息</dt>
+				<dd>
+					<a data-type="1" class="details-a-click">国内展会</a>
+				</dd>
+				<dd>
+					<a data-type="2" class="details-a-click">国际展会</a>
+				</dd>
+				<dd>
+					<a data-type="3" class="details-a-click">美博会参展商名录</a>
+				</dd>
+			</dl>
+		</div>
+	</div>-->
+	
+	<div id="wp"></div>
+</body>
+<script id="tpl" type="text/html">
+	<%var LOGO_URL = '//meibanglai.com/data/dataList.do';%>
+	<%var DETAILS_URL = '/view/data/foreignexhibition.html';%>
+	<table class="table">
+		<tr class="warning">
+			<th class="col-xs-9 col-lg-4">参展公司</th>
+			<th class="visible-lg col-lg-4">邮箱</th>
+			<th>参展日期</th>
+			<th class="visible-lg">展馆/展位</th>
+		</tr>
+	<%for (var i = 0; i < data.length; i++) {%>
+		<tr>
+			<td>
+				<span><%:=data[i].company_name%></span>
+				<span><%:=data[i].address%></span>
+			</td>
+			<td class="visible-lg">
+				<%:=data[i].email%>
+			</td>
+			<td class="visible-lg"><%:=data[i].time%></td>
+			<td>
+				<span><%:=data[i].area%>/<%:=data[i].site%></span>
+			</td>
+	<%}%>
+		</tr>
+	</table>
+	<hr>
+</script>
+</html>

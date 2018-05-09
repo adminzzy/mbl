@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Document</title>
+</head>
+<body>
+	<!--<div class="fix-box">
+		<div class="w1190">
+			<dl>
+				<dt>店家招聘</dt>
+				<dd>
+					<a data-type="1" class="details-a-click">本地招聘信息</a>
+				</dd>
+				<dd>
+					<a data-type="2" class="details-a-click">本地求职信息</a>
+				</dd>
+			</dl>
+		</div>
+	</div>-->
+	
+	<div id="wp"></div>
+	</div>
+</body>
+<script id="tpl" type="text/html">
+	<%var DETAIL_PREFIX = '/view/data/resume.html';%>
+	<%var educationToString= function (education) {
+        if(education == "0") return "无";
+        if(education == "1") return "高中";
+        if(education == "2") return "大专";
+        if(education == "3") return "本科";
+        if(education == "4") return "本科以上";
+   };%>
+	<table class="table">
+		<tr class="warning">
+			<th class="col-xs-2 col-lg-2">求职者姓名</th>
+			<th class="col-xs-4 col-lg-4">求职者信息</th>
+			<th class="col-xs-3 col-lg-2">待遇要求</th>
+			<th class="visible-lg col-lg-3">职位/地点</th>
+			<th></th>
+		</tr>
+		<%for (var i = 0; i < data.length; i++) {%>
+		<tr class="active">
+			<td>
+				<span><%:=data[i].name%></span>
+			</td>
+			<td>
+				<span><%:=data[i].sex ? "男" : "女"%>&nbsp;|&nbsp;<%:=data[i].age%>&nbsp;|&nbsp;<%:=data[i].experience%>&nbsp;|&nbsp;<%:=educationToString(data[i].education)%></span>
+			</td>
+			<td>
+				<%:=data[i].job_treatment%>
+			</td>
+			<td class="visible-lg">
+				<span>期待职位：<%:=data[i].job_intention%></span>
+				<span>期待地点：<%:=data[i].job_area%></span>
+			</td>
+			<td>
+				<button class="btn btn-primary" onclick="window.location.href='<%:=DETAIL_PREFIX%>?d=<%:=data[i].id%>'">查看简历</button>
+			</td>
+			<%}%>
+		</tr>
+	</table>
+	<hr>
+</script>
+</html>

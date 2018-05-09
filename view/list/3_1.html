@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" href="../../css/default.css">
+</head>
+<body>
+	<div class="fix-box">
+		<div class="w1190">
+			<dl class="w600">
+				<dt>展会信息</dt>
+				<dd>
+					<a data-type="1" class="details-a-click">国内展会</a>
+				</dd>
+				<dd>
+					<a data-type="2" class="details-a-click">国际展会</a>
+				</dd>
+				<dd>
+					<a data-type="3" class="details-a-click">美博会参展商名录</a>
+				</dd>
+			</dl>
+		</div>
+	</div>
+	
+	<div id="wp"></div>
+</body>
+<script id="tpl" type="text/html">
+	<%var LOGO_URL = '//meibanglai.com/data/dataList.do';%>
+	<%var DETAILS_URL = '/view/data/foreignexhibition.html';%>
+	<%for (var i = 0; i < data.length; i++) {%>
+		<div class="content">
+			<div class="Exhibition_main clearfix">
+				<ul class="fl ">
+					<li class="f-rem-017 p-4 f-w">
+						<a href='<%:=DETAILS_URL%>?d=<%:=data[i].id%>'><%:=data[i].meeting_name%></a>
+					</li>
+					<li class="p-4">地址：<%:=data[i].meeting_adress%></li>
+					<li class="p-4">举办：<%:=data[i].organizer%></li>
+					<li class="p-4"><%:=data[i].meeting_time%></li>
+				</ul>
+				<ul class="list_c fr w-20 text-c">
+					<li>
+						<a href="<%:=DETAILS_URL%>?d=<%:=data[i].id%>"><%:=data[i].meeting_area%></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	<%}%>
+	<hr>
+</script>
+</html>

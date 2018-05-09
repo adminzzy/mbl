@@ -1,0 +1,120 @@
+.marginTableNone{
+	margin-right: -15px;
+	margin-left: -15px;
+	width:auto;
+}
+.marginTop30{
+	margin-top: 30px
+}
+
+.tableSty{
+    background-color: #FFF;
+    margin-top: 10px;
+    border: 1px solid #e6e6e6;
+    margin-bottom: 50px;
+}
+.resumeTop{
+	width: 100%;
+	margin-bottom: 20px;
+    background-image: url('/image/resumeBackground.jpg');
+    background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%;
+}
+.img{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+}
+
+.basic{
+}
+.basic> h1{
+    font-weight: bold;
+    font-size: 22px;
+}
+.basic> span{
+    font-size: 16px;
+}
+
+.row hr{
+    border-bottom: 1px dashed  #d4d4d4;
+    border-top: 0px;
+}
+
+#reinforce tr>td {
+	border: 0;
+}
+
+#reinforce{
+
+}
+#reinforce >p{
+    color: #7a7a7a;
+    font-size: 16px;
+    line-height: 30px;
+}
+#reinforce >p >span{
+    color: #000000;
+    font-size: 16px;
+    line-height: 24px;
+}
+#reinforce >h7{
+    color: #000000;
+    font-size: 22px;
+    display: inline-block;
+    margin-bottom: -10px;
+}
+#reinforce >a{
+    margin-bottom: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 60px;
+    padding-right: 60px;
+    background-color: #FE3989;
+    color: #FFFFFF;
+    display: inline-block;
+    width: auto;
+}
+#phone{
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#speciality{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 26px;
+}
+#self-assessment{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 26px;
+}
+
+
+
+
+
+/* 通配符模式,给col-xs-*加上margin */
+
+[id^="nav-detailed-li_"] >a:link{
+	color: #FFF
+}
+[id^="nav-detailed-li_"] >a:visited{
+	color: #FFF
+}
+
+/* 图片懒加载 */
+.demo img {
+    width: auto;
+    height: auto;
+    /* background: url(/wfly/image/public/loading.gif) 50% no-repeat; */
+}
+
+/* 模板 */
+/* 正文 */
+    .content{position:relative;font-size:14px;line-height:25px;overflow:hidden;text-align:left}
+    .content h3{ margin-top:20px;font-size:16px}
+    .content p{text-indent:2em;margin-top:20px;margin-bottom:20px}
+    .content ul{text-indent:2em}
+
